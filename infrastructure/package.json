@@ -1,0 +1,33 @@
+{
+  "name": "infrastructure",
+  "version": "0.1.0",
+  "bin": {
+    "infrastructure": "bin/app.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk",
+    "cdk:deploy:dev": "CDK_DEFAULT_REGION=us-east-1 NODE_ENV=dev cdk deploy",
+    "cdk:deploy:prod": "CDK_DEFAULT_REGION=us-east-1 NODE_ENV=prod cdk deploy",
+    "deploy:dev": "NODE_ENV=dev cdk deploy",
+    "deploy:prod": "NODE_ENV=prod cdk deploy",
+    "destroy:dev": "NODE_ENV=dev cdk destroy",
+    "destroy:prod": "NODE_ENV=prod cdk destroy"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.19",
+    "aws-cdk": "^2.1010.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.525.0",
+    "@aws-sdk/client-dynamodb": "^3.525.0",
+    "@aws-sdk/lib-dynamodb": "^3.525.0",
+    "aws-cdk-lib": "^2.190.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21",
+    "dotenv": "^16.4.5"
+  }
+}
